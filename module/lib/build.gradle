@@ -1,0 +1,13 @@
+archivesBaseName = 'autotest.module.lib'
+
+eclipse {
+  project {
+    name = 'autotest.module.lib'
+  }
+}
+
+dependencies {
+  compile group: 'org.apache.poi', name: 'poi', version: '4.1.0'
+  compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+  // compile project(':module/core/service')
+}

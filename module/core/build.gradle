@@ -1,0 +1,11 @@
+archivesBaseName = 'autotest.module.core'
+
+eclipse {
+  project {
+    name = 'autotest.module.core'
+  }
+}
+
+dependencies {
+  compile project(':module/lib')
+}
