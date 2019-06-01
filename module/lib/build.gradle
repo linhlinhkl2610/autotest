@@ -8,6 +8,14 @@ eclipse {
 
 dependencies {
   compile group: 'org.apache.poi', name: 'poi', version: '4.1.0'
+  compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.0'
+  
   compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
-  // compile project(':module/core/service')
+  
+  compile "com.fasterxml.jackson.core:jackson-core:2.9.8"
+  compile "com.fasterxml.jackson.core:jackson-databind:2.9.8"
+  compile "com.fasterxml.jackson.core:jackson-annotations:2.9.8"
+  compile("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.8") {
+    transitive = true
+  }
 }
