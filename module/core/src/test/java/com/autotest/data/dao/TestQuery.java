@@ -3,7 +3,7 @@ package com.autotest.data.dao;
 import java.sql.Statement;
 import java.util.List;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class TestQuery {
 
