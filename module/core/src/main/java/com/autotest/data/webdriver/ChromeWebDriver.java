@@ -13,9 +13,7 @@ public class ChromeWebDriver extends ChromeDriver {
   private int sleepTime = 0;
   private int totalSleepTime = 0;
   
-  public ChromeWebDriver() {
-    
-  }
+  public ChromeWebDriver() {  }
   
   public ChromeWebDriver(int sleepTime) {
     this.sleepTime = sleepTime;
