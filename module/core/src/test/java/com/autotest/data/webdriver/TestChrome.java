@@ -4,19 +4,20 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.autotest.data.webdriver.ChromeWebDriver.ByType;
+import com.autotest.data.webdriver.WebDriver.ByType;
+import com.autotest.data.webdriver.WebDriver.WebDriverType;
 
 
 public class TestChrome {
 
-  private ChromeWebDriver driver;
+  private WebDriver driver;
   
   @Before
   public void init() {
-    String chromePath = ChromeWebDriver.class.getClassLoader().getResource("chromedriver_ver74.exe").getPath();
+    String chromePath = WebDriver.class.getClassLoader().getResource("chromedriver_ver74.exe").getPath();
     System.setProperty("webdriver.chrome.driver", chromePath);
     
-    driver = new ChromeWebDriver();
+    driver = new WebDriver(WebDriverType.CHROME, 5000);
   }
   
   @Test
@@ -24,7 +25,6 @@ public class TestChrome {
     driver.get("http://www.kenh14.vn");
     
     driver.click(ByType.LINK_TEXT, "Ăn cả thế giới");
-    driver.sleep(2000);
   }
   
   @After

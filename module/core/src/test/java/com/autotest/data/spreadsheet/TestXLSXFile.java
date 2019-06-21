@@ -10,6 +10,8 @@ public class TestXLSXFile {
     
     Workbook wb = new Workbook(file);
     Sheet sheet = wb.getSheet(0);
-    sheet.getSheetName();
+    sheet.getName();
+    
+    System.out.println(sheet.getStringValue(1, 1));
   }
 }
