@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class WebDriver {
 
   public enum WebDriverType   { CHROME, FIREFOX };
-  public enum ByType          { ID, CSS, XPATH, CLASS_Name, NAME, LINK_TEXT }
+  public enum ByType          { ID, CSS, XPATH, CLASS_NAME, NAME, LINK_TEXT }
   private int totalSleepTime  = 0;
   
   private RemoteWebDriver driver;
@@ -62,7 +62,7 @@ public class WebDriver {
       by = By.cssSelector(locator);
     } else if(type == ByType.XPATH){
       by = By.xpath(locator);
-    } else if(type == ByType.CLASS_Name){
+    } else if(type == ByType.CLASS_NAME){
       by = By.className(locator);
     } else if(type == ByType.NAME){
       by = By.name(locator);

@@ -14,7 +14,7 @@ public class TestChrome {
   
   @Before
   public void init() {
-    String chromePath = WebDriver.class.getClassLoader().getResource("chromedriver_ver74.exe").getPath();
+    String chromePath = WebDriver.class.getClassLoader().getResource("chromedriver_ver75.exe").getPath();
     System.setProperty("webdriver.chrome.driver", chromePath);
     
     driver = new WebDriver(WebDriverType.CHROME, 5000);
