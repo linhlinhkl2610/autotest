@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class WebDriver {
 
@@ -46,6 +47,30 @@ public class WebDriver {
   
   public void click(ByType type, String locator) throws Exception{
     getElenment(type, locator).click();
+    sleep(sleepTime);
+  }
+  
+  public void sendKey(ByType type, String locator, String message) throws Exception{
+    getElenment(type, locator).clear();
+    sleep(200);
+    getElenment(type, locator).sendKeys(message);
+    sleep(sleepTime);
+  }
+  
+  public void sendKey(ByType type, String locator, String message, int sleepTime) throws Exception{
+    getElenment(type, locator).clear();
+    sleep(200);
+    getElenment(type, locator).sendKeys(message);
+    sleep(sleepTime);
+  }
+  
+  public void selectByVisibleText(ByType type, String locator, String message) throws Exception{
+    new Select(getElenment(type, locator)).selectByVisibleText(message);
+    sleep(sleepTime);
+  }
+  
+  public void selectByVisibleText(ByType type, String locator, String message, int sleepTime) throws Exception{
+    new Select(getElenment(type, locator)).selectByVisibleText(message);
     sleep(sleepTime);
   }
   
