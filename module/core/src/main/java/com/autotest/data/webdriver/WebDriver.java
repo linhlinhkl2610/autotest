@@ -74,6 +74,28 @@ public class WebDriver {
     sleep(sleepTime);
   }
   
+  public boolean isSelected(ByType type, String locator){
+    return getElenment(type, locator).isSelected();
+  }
+  
+  public void clear(ByType type, String locator) throws Exception{
+    getElenment(type, locator).clear();
+    sleep(sleepTime);
+  }
+  
+  public void clear(ByType type, String locator, int sleepTime) throws Exception{
+    getElenment(type, locator).clear();
+    sleep(sleepTime);
+  }
+  
+  public String getText(ByType type, String locator){
+    return getElenment(type, locator).getText();
+  }
+  
+  public String getCurrentUrl() {
+    return driver.getCurrentUrl();
+  }
+  
   public void sleep(int time) throws Exception{
     this.sleepTime += time;
     Thread.sleep(time);
